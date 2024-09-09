@@ -1,0 +1,15 @@
+﻿@model Meetinginfo
+<main class="text-center">
+	<h1 class="h4">@ViewBag.Selamlama</h1>
+	<p>Toplantıya katılım durumunuzu bildiriniz. </p>
+
+	<div class="card my-2">
+		<ul class="list-group list-group-flush">
+			<li class="list-group-item">@Model.Location</li>
+			<li class="list-group-item">@Model.Date.ToString("dd/MM/yyyy HH:mm:ss") tarihinde gerçekleşecek</li>
+			<li class="list-group-item">@Model.Numberofpeople Katılımcı</li>
+		</ul>
+	</div>
+
+	<a asp-controller="Meeting" asp-action="Apply" class="btn btn-sm btn-primary">Başvuru yap</a>
+</main>
